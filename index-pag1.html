@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página 1</title>
+    <link rel="stylesheet" href="Style/style-pag1.css">
+    <script src="Script/script-pag1.js"></script>
+</head>
+<body>
+    <header class="header">
+        <a href="index-menu.html"><div class="pag_menu"> Menu </div></a>
+        <a href="index-pag1.html"><div class="pag1_link">Sistema solar</div></a>
+        <a href="index-pag2.html"><div class="pag2_link">Órbita</div></a>
+        <a href="index-pag3.html"><div class="pag3_link">Curiosidades</div></a>
+        <div class="pad">Tamanho real:
+            <div class="scale_pad">
+                <div id="scale_ball"></div>
+                <div id="scale_button_on_cell" class="scale_button" onclick="func_escala_cell()"></div>
+                <div id="scale_button_on" class="scale_button" onclick="func_escala()"></div>
+                <div id="scale_button_off_cell" class="scale_button" onclick="func_escala_back_cell()"></div>
+                <div id="scale_button_off" class="scale_button" onclick="func_escala_back()"></div>
+            </div>
+        </div>
+    </header>
+    <div class="section2">
+        <section>
+            <a href="#solpopup">
+                <div id="planeta1" class="planeta planeta1" onclick="func_sol()">
+                    <div class="planeta_menor planeta1_menor"></div>
+                </div>
+            </a>
+            <div class="dist dist1">Distância de 77.000.0 km <br> |--------------|</div>
+        <a href="#mercuriopopup">
+            <div id="planeta2" class="planeta planeta2" onclick="func_mercurio()">
+                <div class="planeta_menor planeta2_menor"></div>
+            </div>
+        </a>
+        <div class="dist dist2">Distância de 31.000.000 km <br> |--------------|
+        </div>
+        <a href="#venuspopup">
+            <div id="planeta3" class="planeta planeta3" onclick="func_venus()">
+                <div class="planeta_menor planeta3_menor"></div>
+            </div>
+        </a>
+        <div class="dist dist3">Distância de 38.000.000 km <br> |--------------|</div>
+        <a href="#terrapopup">
+            <div id="planeta4" class="planeta planeta4" onclick="func_terra()">
+                <div class="planeta_menor planeta4_menor">
+                    <div class="lua">
+                        <div class="blua"></div>
+                    </div>
+                </div>
+            </div>
+        </a>
+        <div class="dist dist4">Distância de 54.000.000 km <br> |--------------|</div>
+        <a href="#martepopup">
+            <div id="planeta5" class="planeta planeta5" onclick="func_marte()">
+                <div class="planeta_menor planeta5_menor"></div>
+            </div>
+        </a>
+        <div class="dist dist5">Distância de 484.000.000 km <br> |--------------|</div>
+        <a href="#jupiterpopup">    
+            <div id="planeta6" class="planeta planeta6" onclick="func_jupiter()">
+                <div class="planeta_menor planeta6_menor"></div>
+            </div>
+        </a>
+        <div class="dist dist6">Distância de 778.000.000 km <br> |--------------|</div>
+        <a href="#saturnopopup">
+            <div id="planeta7" class="planeta planeta7" onclick="func_saturno()">
+                <div class="planeta_menor planeta7_menor">
+                    <img class="aneis" src="Style/Planetas/aneis.png" height="100%" width="auto">
+                </div>
+            </div>
+        </a>
+        <div class="dist dist7">Distância de 1.400.000.000 km <br> |--------------|</div>
+        <a href="#uranopopup">
+            <div id="planeta8" class="planeta planeta8" onclick="func_urano()">
+                <div class="planeta_menor planeta8_menor"></div>
+            </div>
+        </a>
+        <div class="dist dist8">Distância de 2.700.000.000 km <br> |--------------|</div>
+        <a href="#netunopopup">    
+            <div id="planeta9" class="planeta planeta9" onclick="func_netuno()">
+                <div class="planeta_menor planeta9_menor"></div>
+            </div>
+        </a>    
+        </section>
+        <div id="info">*Valores aproximados</div>
+    </div>
+
+    <div id="solpopup" class="popup">
+        <img class="icone_x" onclick="func_fec_sol()" src="Style/Imagens/icone_x.png">
+        <img class="borda" src="Style/Imagens/solpopup.webp" >
+        <p class="textpopup">
+            O Sol é uma estrela com um diâmetro de aproximadamente 1,4 milhão de quilômetros e uma massa de cerca de 1,989 x 10^30 quilogramas. Tem uma idade estimada de 4,6 bilhões de anos e é composto principalmente de hidrogênio (74%) e hélio (24%). <br><br>Suas temperaturas variam de cerca de 5.500 graus Celsius na superfície (fotosfera) a aproximadamente 15 milhões de graus Celsius no núcleo, onde reações nucleares geram sua energia. <br><br>O Sol é a fonte de luz e calor que sustenta a vida na Terra e desempenha um papel importante no clima espacial e nas comunicações do nosso planeta.
+        </p>
+    </div>
+    
+    <div id="mercuriopopup" class="popup">
+        <img class="icone_x" onclick="func_fec_mercurio()" src="Style/Imagens/icone_x.png">
+        <img class="borda" src="Style/Imagens/mercuriopopup.png" >
+        <p class="textpopup">
+            Mercúrio é o menor planeta do nosso sistema solar, com um diâmetro de cerca de 4.880 quilômetros e uma massa de aproximadamente 3,3 x 10^23 quilogramas. Este planeta tem uma idade estimada de 4,6 bilhões de anos. <br><br>Sua proximidade com o Sol resulta em extremos de temperatura, com temperaturas diurnas atingindo cerca de 427 graus Celsius e temperaturas noturnas caindo para aproximadamente -173 graus Celsius. Além disso, Mercúrio não possui uma atmosfera significativa e sua superfície é marcada por crateras de impacto e desfiladeiros, resultado de sua história geológica moldada por colisões com asteroides e cometas.
+        </p>
+    </div>
+
+    <div id="venuspopup" class="popup">
+        <img class="icone_x" onclick="func_fec_venus()" src="Style/Imagens/icone_x.png">
+        <img class="borda" src="Style/Imagens/venuspopup.jpg" >
+        <p class="textpopup">
+            Vênus é um planeta semelhante em tamanho e idade à Terra, mas possui uma atmosfera densa de dióxido de carbono que gera temperaturas extremamente altas, tornando-o o planeta mais quente do sistema solar, com até 475 graus Celsius na superfície. <br><br>Sua atmosfera também gera um efeito estufa descontrolado. Vênus tem um movimento de rotação retrógrado e sua superfície é caracterizada por vulcões e planícies rochosas. É um ambiente inóspito para a vida tal como a conhecemos.
+        </p>
+    </div>
+
+    <div id="terrapopup" class="popup">
+        <img class="icone_x" onclick="func_fec_terra()" src="Style/Imagens/icone_x.png">
+        <img class="borda" src="Style/Imagens/terrapopup.jpg" >
+        <p class="textpopup">
+            A Terra é o terceiro planeta do sistema solar, com um tamanho médio de cerca de 12.742 quilômetros de diâmetro e uma massa de aproximadamente 5,97 x 10^24 quilogramas. Tem uma idade estimada de cerca de 4,6 bilhões de anos e é o único planeta conhecido a abrigar uma diversidade incrível de vida, graças à sua atmosfera rica em nitrogênio e oxigênio. <br><br>A Terra também é notável por suas paisagens variadas e pela presença da água líquida na superfície, algo único no universo. É o nosso único lar conhecido no vasto espaço cósmico.
+        </p>
+    </div>
+
+    <div id="martepopup" class="popup">
+        <img class="icone_x" onclick="func_fec_marte()" src="Style/Imagens/icone_x.png">
+        <img class="borda" src="Style/Imagens/martepopup.webp" >
+        <p class="textpopup">
+            Marte é o quarto planeta do sistema solar, menor que a Terra, com cerca de 6.779 quilômetros de diâmetro e uma massa de aproximadamente 6,39 x 10^23 quilogramas. Tem uma idade estimada de 4,6 bilhões de anos. <br><br>É conhecido como o "Planeta Vermelho" devido à sua superfície avermelhada. <br><br>Marte possui uma atmosfera fina e é objeto de grande interesse devido à possibilidade de ter tido vida no passado e ao potencial de exploração humana.
+        </p>
+    </div>
+
+    <div id="jupiterpopup" class="popup">
+        <img class="icone_x" onclick="func_fec_jupiter()" src="Style/Imagens/icone_x.png">
+        <img class="borda" src="Style/Imagens/jupiterpopup.webp" >
+        <p class="textpopup">
+            Júpiter é o maior planeta do sistema solar, com cerca de 139.822 quilômetros de diâmetro e uma massa gigantesca de 1,9 x 10^27 quilogramas. Com uma idade estimada de 4,6 bilhões de anos, Júpiter é conhecido por sua atmosfera turbulenta, destacada pela Grande Mancha Vermelha, e é composto principalmente de hidrogênio e hélio. <br><br>Ele tem anéis e muitas luas, incluindo Ganimedes, a maior lua do sistema solar. Júpiter exerce uma forte influência gravitacional no sistema solar e é alvo de interesse na exploração espacial para entender a formação do sistema solar e buscar vida em suas luas.
+        </p>
+    </div>
+
+    <div id="saturnopopup" class="popup">
+        <img class="icone_x" onclick="func_fec_saturno()" src="Style/Imagens/icone_x.png">
+        <img class="borda" src="Style/Imagens/saturnopopup.webp" >
+        <p class="textpopup">
+            Saturno, o sexto planeta do sistema solar, é conhecido por seus deslumbrantes anéis e tem cerca de 116.460 quilômetros de diâmetro e uma massa de 5,68 x 10^26 quilogramas. Com uma idade estimada de 4,6 bilhões de anos, possui uma atmosfera dourada, anéis compostos de gelo e poeira, e uma grande variedade de luas, incluindo a Titã com uma atmosfera densa. <br><br>A exploração espacial, como a missão Cassini-Huygens, tem proporcionado importantes descobertas sobre Saturno e seus sistemas.
+        </p>
+    </div>
+
+    <div id="uranopopup" class="popup">
+        <img class="icone_x" onclick="func_fec_urano()" src="Style/Imagens/icone_x.png">
+        <img class="borda" src="Style/Imagens/uranopopup.webp" >
+        <p class="textpopup">
+            Urano é o sétimo planeta do sistema solar, caracterizado por sua inclinação extrema e coloração azul-esverdeada. Tem um tamanho considerável, com cerca de 51.118 quilômetros de diâmetro e uma massa de aproximadamente 8,68 x 10^25 quilogramas. <br><br>Com uma idade em torno de 4,6 bilhões de anos, Urano é composto principalmente por gases como hidrogênio, hélio e metano. <br><br>Possui anéis e um número menor de luas em comparação com outros planetas. Sua inclinação única e atmosfera intrigante o tornam um alvo de estudo e exploração no sistema solar.
+        </p>
+    </div>
+
+    <div id="netunopopup" class="popup">
+        <img class="icone_x" onclick="func_fec_netuno()" src="Style/Imagens/icone_x.png">
+        <img class="borda" src="Style/Imagens/netunopopup.webp" >
+        <p class="textpopup">
+            Netuno, o oitavo planeta do sistema solar, destaca-se por sua cor azul profunda e atmosfera turbulenta. Com cerca de 49.532 quilômetros de diâmetro e uma massa de aproximadamente 1,02 x 10^26 quilogramas, tem uma idade similar à do sistema solar, em torno de 4,6 bilhões de anos. <br><br>Sua composição principal inclui hidrogênio, hélio e metano, conferindo-lhe sua coloração única. Netuno possui uma Grande Mancha Escura, ventos velozes e um sistema de anéis e luas, como Tritão, que é geologicamente ativa. <br><br>A exploração, incluindo a missão Voyager 2, trouxe valiosas informações sobre esse planeta distante.
+        </p>
+    </div>
+</body>
+</html>

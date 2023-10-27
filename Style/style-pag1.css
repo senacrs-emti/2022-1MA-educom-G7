@@ -1,0 +1,658 @@
+@font-face {
+    font-family: ShareTech;
+    src: url(ShareTech-Regular.ttf);
+}
+
+* {
+    color: white;
+    font-size: 1.5vmax;
+    font-family: ShareTech;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* Barra de Scroll */
+    ::-webkit-scrollbar {
+        width: 10px;
+        background: rgb(0 ,0 ,0 , 0.5);
+        border-radius: 30px;
+    }
+  
+    ::-webkit-scrollbar-track {
+        border-radius: 30px;
+    }
+  
+    ::-webkit-scrollbar-thumb {
+        background: white; 
+        border-radius: 30px;
+    }
+  
+    ::-webkit-scrollbar-thumb:hover {
+        border: 0.5vh solid white;
+        background: rgb(0 ,0 ,0 , 0.5);
+    }
+
+.header{
+    width: 100%;
+    height: 10vh;
+    border-radius: 30px;
+    background: rgb(0 ,0 ,0 , 0.5);
+    border: 0.5vh solid white;
+}
+
+.pag1_link, .pag2_link, .pag3_link, .pag_menu{
+    width: 15%;
+    height: 8vh;
+    margin-top: 1vh;
+    margin-left: 0.7vh;
+    font-size: 2vmax;
+    text-align: center;
+    float: left;
+    border-radius: 30px;
+    padding: 0.5vh;
+    box-sizing: border-box;
+    background: rgb(0 ,0 ,0 , 0.5);
+    border: 0.5vh solid white;
+}
+
+.pag1_link:hover, .pag2_link:hover, .pag3_link:hover, .pag_menu:hover{
+    cursor: pointer;
+    color: black;
+    background-color: rgb(255 ,255 ,255);
+}
+
+body {
+    padding: 1vmax;
+}
+
+.section2{
+    overflow: hidden;
+    overflow-x: scroll;
+    height: 60vh;
+    margin-top: 5vh;
+    background: rgb(0 ,0 ,0 , 0.5);
+    border: 0.5vh solid white;
+    border-radius: 30px;
+}
+
+section {
+    overflow: hidden;
+    width: min-content;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 30px;
+}
+
+.pad{
+    width: 30%;
+    height: 8vh;
+    margin-top: 1vh;
+    margin-right: 0.5vh;
+    font-size: 2vmax;
+    text-align: center;
+    float: right;
+    border-radius: 30px;
+    padding: 0.5vh;
+    box-sizing: border-box;
+    background: rgb(0 ,0 ,0 , 0.5);
+    border: 0.5vh solid white;
+}
+
+.scale_pad {
+    margin-top: 1vmin;
+    padding: 0.25vmin;
+    height: 6vmin;
+    width: 12vmin;
+    border-radius: 100px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    float: right;
+    box-sizing: border-box;
+    cursor: pointer;
+    background: rgb(0 ,0 ,0 , 0.5);
+    border: 0.5vh solid white;
+}
+
+.scale_pad:hover #scale_ball {
+    border: 0.5vh solid white;
+    background: rgb(0 ,0 ,0 , 0.5);
+}
+
+#scale_ball {
+    height: 4vmin;
+    width: 4vmin;
+    margin-top: 0.25vmin;
+    margin-left: 0.25vmin;
+    border-radius: 100%;
+    background-color: white;
+    transition: margin-left 0.2s linear;
+    box-sizing: border-box;
+}
+
+.scale_button {
+    height: 2.5vmax;
+    width: 5vmax;
+    margin-top: -2.5vmax;
+    position: sticky;
+    background-color: transparent;
+    border-radius: 100px;
+}
+
+#info{
+    width: 20%;
+    height: 2.5vmax;
+    margin-top: -8vh;
+    margin-right: 0.5vh;
+    font-size: 1.5vmax;
+    text-align: center;
+    float: left;
+    border-radius: 30px;
+    display: none;
+    padding: 0.5vmax;
+    position: fixed;
+    box-sizing: border-box;
+    background: rgb(0 ,0 ,0 , 0.5);
+    border: 0.5vh solid white;
+}
+
+.dist{
+    width: 8vmax;
+    height: 2vmax;
+    color: transparent;
+    margin-left: 3vmax;
+    font-size: 1vmax;
+}
+
+.dist:hover{
+    display: block;
+    color: white;
+}
+
+.planeta_menor {
+    width: 90%;
+    height: 90%;
+    margin: 5%;
+    border-radius: 100%;
+    box-shadow: 0 0 60px 1px rgb(0, 0, 0);
+    transition: height 1s, width 1s, margin 1s;
+}
+
+.planeta_menor:hover {
+    height: 120%;
+    width: 120%;
+    margin: -10%;
+}
+
+.lua {
+    width: 100%;
+    height: 100%;
+    animation-name: animation-2;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.blua {
+    height: 30%;
+    width: 30%;
+    margin-left: -40%;
+    border-radius: 100%;
+    background-image: url(Planetas/lua.jpg);
+    background-size: cover;
+}
+
+.planeta4:hover .blua::before {
+    content: "Lua";
+    position: absolute;
+    top: -35px;
+    left: 50%;
+    margin-left: -70%;
+    transform: translateX(-50%);
+    background-color: black;
+    padding: 5px 10px;
+    border-radius: 5px;
+    opacity: 0.9;
+}
+
+.planeta1 {
+    width: 15vmax;
+    height: 15vmax;
+}
+
+.planeta1_menor {
+    background-image: url(Planetas/sol.jpg);
+    background-size: cover;
+}
+
+.planeta1:hover::before {
+    content: "Sol";
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: black;
+    padding: 5px 10px;
+    border-radius: 5px;
+    opacity: 0.9;
+}
+
+.planeta2 {
+    width: 3vmax;
+    height: 3vmax;
+}
+
+.planeta2_menor {
+    background-image: url(Planetas/mercurio.png);
+    background-size: cover;
+    animation-name: animation;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.planeta2:hover::before {
+    content: "Mercúrio";
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: black;
+    padding: 5px 10px;
+    border-radius: 5px;
+    opacity: 0.9;
+}
+
+.planeta3 {
+    width: 5vmax;
+    height: 5vmax;
+}
+
+.planeta3_menor {
+    background-image: url(Planetas/venus.png);
+    background-size: cover;
+    animation-name: animation;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.planeta3:hover::before {
+    content: "Vênus";
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: black;
+    padding: 5px 10px;
+    border-radius: 5px;
+    opacity: 0.9;
+}
+
+.planeta4 {
+    width: 6vmax;
+    height: 6vmax;
+}
+
+.planeta4_menor {
+
+    background-image: url(Planetas/terra.jpg);
+    background-size: cover;
+    animation-name: animation;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.planeta4:hover::before {
+    content: "Terra";
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: black;
+    padding: 5px 10px;
+    border-radius: 5px;
+    opacity: 0.9;
+}
+
+.planeta5 {
+    width: 4vmax;
+    height: 4vmax;
+}
+
+.planeta5_menor {
+    background-image: url(Planetas/marte.png);
+    background-size: cover;
+    animation-name: animation;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.planeta5:hover::before {
+    content: "Marte";
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: black;
+    padding: 5px 10px;
+    border-radius: 5px;
+    opacity: 0.9;
+}
+
+.planeta6 {
+    width: 10vmax;
+    height: 10vmax;
+}
+
+.planeta6_menor {
+    background-image: url(Planetas/jupiter.png);
+    background-size: cover;
+    animation-name: animation;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.planeta6:hover::before {
+    content: "Júpiter";
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: black;
+    padding: 5px 10px;
+    border-radius: 5px;
+    opacity: 0.9;
+}
+
+.planeta7 {
+    width: 8vmax;
+    height: 8vmax;
+}
+
+.planeta7_menor {
+    background-image: url(Planetas/saturno.jpg);
+    background-size: cover;
+    animation-name: animation;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    rotate: -20deg;
+}
+
+.planeta7:hover::before {
+    content: "Saturno";
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: black;
+    padding: 5px 10px;
+    border-radius: 5px;
+    opacity: 0.9;
+}
+
+.aneis {
+    height: 100%;
+    width: 250%;
+    margin-left: -75%;
+}
+
+.planeta8 {
+    width: 8vmax;
+    height: 8vmax;
+}
+
+.planeta8_menor {
+    background-image: url(Planetas/urano.png);
+    background-size: cover;
+    animation-name: animation;
+    animation-duration: 9s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.planeta8:hover::before {
+    content: "Urano";
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: black;
+    padding: 5px 10px;
+    border-radius: 5px;
+    opacity: 0.9;
+}
+
+.planeta9 {
+    width: 7vmax;
+    height: 7vmax;
+}
+
+.planeta9_menor {
+    background-image: url(Planetas/netuno.png);
+    background-size: cover;
+    animation-name: animation;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.planeta9:hover::before {
+    content: "Netuno";
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: black;
+    padding: 5px 10px;
+    border-radius: 5px;
+    opacity: 0.9;
+}
+
+@keyframes animation-2 {
+    0% {
+        rotate: 90deg;
+    }
+
+    25% {
+        rotate: 180deg;
+    }
+
+    50% {
+        rotate: 270deg;
+    }
+
+    75% {
+        rotate: 360deg;
+    }
+
+    100% {
+        rotate: 450deg;
+    }
+}
+
+@keyframes animation {
+    0% {
+        transform: rotate(0deg) translate(-10%) rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg) translate(-10%) rotate(-360deg);
+    }
+}
+
+
+.popup{
+    width: 100%;
+    height: 45vh;
+    display: none;
+    margin-top: 5vh;
+    background: rgb(0 ,0 ,0 , 0.5);
+    border: 0.5vh solid white;
+    border-radius: 30px;
+}
+.borda {
+    width: 30%;
+    height: auto;
+    margin-top: 4vh;
+    margin-left: 2vh;
+    background: rgb(0 ,0 ,0 , 0.5);
+    border: 0.5vh solid white;
+    border-radius: 30px;
+    overflow: hidden;
+    align-items: center;
+    float: left;
+}
+
+.icone_x {
+    width: 2vw;
+    height: auto;
+    float: left;
+    cursor: pointer;
+    background-color: white;
+    border-radius: 100%;
+    border: 0.5vh solid white;
+    margin-left: 1vw;
+    margin-top: 1vw;
+}
+
+.textpopup{
+    width: 50%;
+    height: 40vh;
+    margin-right: 5%;
+    margin-top: 2.5vh;
+    float: right;
+}
+
+
+/* TELA DE CELULAR  */
+@media(max-width:100vh) {
+    
+    * {
+        font-size: 3vmax;
+    }
+    
+    body{
+        background-image: url(Imagens/fundo.gif), linear-gradient(180deg, rgb(214, 150, 104) 0%, rgb(156, 83, 48) 6%, rgb(75, 45, 38) 20%, rgb(27, 13, 17) 40%, rgb(23, 12, 21) 70%, rgb(8, 5, 10) 100%);; 
+        background-blend-mode: lighten;
+    }
+    
+    .pad{
+        width: 40%;
+    }
+    
+    .section2 {
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        margin-top: 2vh;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    section{
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #scale_button_on {
+        display: none;
+    }
+    
+    #scale_button_on_cell {
+        display: block;
+    }
+    
+    #scale_button_off {
+        display: none;
+    }
+    
+    #scale_button_off_cell {
+        display: none;
+    }
+    
+    .planeta {
+        float: left;
+        margin-top: 5vmax;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        position: relative;
+        cursor: pointer;
+    }
+    
+    .popup{
+        width: 100%;
+        height: 115vh;
+    }
+    
+    .borda{
+        margin-top: 1vh;
+        height: auto;
+        width: 90%;
+    }
+    
+    .icone_x{
+        width: 5vw;
+        height: auto;
+    }
+
+    .textpopup{
+        width: 90%;
+        height: 60vh;
+    }
+}
+
+/* TELA DE COMPUTADOR  */
+@media(min-width:100vh) {
+    .pag1_link, .pag2_link, .pag3_link, .pag_menu{
+        font-size: 2.5vmax;
+    }
+    
+    body{
+        background-image: url(Imagens/fundo.gif), linear-gradient(90deg, rgb(214, 150, 104) 0%, rgb(156, 83, 48) 6%, rgb(75, 45, 38) 20%, rgb(27, 13, 17) 40%, rgb(23, 12, 21) 70%, rgb(8, 5, 10) 100%);; 
+        background-blend-mode: lighten;
+    }
+
+    #scale_button_on {
+        display: block;
+    }
+    
+    #scale_button_on_cell {
+        display: none;
+    }
+
+    #scale_button_off {
+        display: none;
+    }
+    
+    #scale_button_off_cell {
+        display: none;
+    }
+
+    .planeta {
+        float: left;
+        margin-left: 3vw;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        position: relative;
+        cursor: pointer;
+    }
+
+}

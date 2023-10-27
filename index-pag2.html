@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página 2</title>
+    <link rel="stylesheet" href="Style/style-pag2.css">
+    <script src="Script/script-pag2.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <a href="index-menu.html"><div class="pag_menu"> Menu </div></a>
+        <a href="index-pag1.html"><div class="pag1_link">Sistema solar</div></a>
+        <a href="index-pag2.html"><div class="pag2_link">Órbita</div></a>
+        <a href="index-pag3.html"><div class="pag3_link">Curiosidades</div></a>
+        <div class="pad">Pausar sistema :
+            <div class="scale_pad">
+                <div id="scale_ball"></div>
+                <div id="scale_button_on" class="scale_button" onclick="func_escala()"></div>
+                <div id="scale_button_off" class="scale_button" onclick="func_escala_back()"></div>
+            </div>
+        </div>
+    </header>
+    <section>
+        <div class="sol"></div>
+
+        <div class="mercurio_orbita orbita"></div>
+
+        <div id="mercurio" class="mercurio"></div>
+
+        <div class="venus_orbita orbita"></div>
+
+        <div id="venus" class="venus"></div>
+
+        <div class="terra_orbita orbita"></div>
+
+        <div id="terra" class="terra">
+            <div id="blua" class="blua">
+                <div id="lua" class="lua"></div>
+            </div>
+        </div>
+        <div class="marte_orbita orbita"></div>
+
+        <div id="marte" class="marte"></div>
+
+        <div class="jupiter_orbita orbita"></div>
+
+        <div id="jupiter" class="jupiter"></div>
+
+        <div class="saturno_orbita orbita"></div>
+
+        <div id="saturno" class="saturno">
+            <img class="aneis" src="Style/Planetas/aneis.png" height="100%" width="auto">
+        </div>
+
+        <div class="urano_orbita orbita"></div>
+
+        <div id="urano" class="urano"></div>
+
+        <div class="netuno_orbita orbita"></div>
+
+        <div id="netuno" class="netuno"></div>
+    </section>
+</body>
+
+</html>

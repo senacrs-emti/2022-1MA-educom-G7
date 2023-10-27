@@ -1,0 +1,525 @@
+@font-face {
+    font-family: ShareTech;
+    src: url(ShareTech-Regular.ttf);
+}
+* {
+    color: white;
+    font-size: 1.3vmax;
+    font-family: ShareTech;
+}
+
+.header{
+    width: 100%;
+    height: 10vh;
+    border-radius: 30px;
+    background: rgb(0 ,0 ,0 , 0.5);
+    border: 0.5vh solid white;
+}
+
+.pag1_link, .pag2_link, .pag3_link, .pag_menu{
+    width: 15%;
+    height: 8vh;
+    margin-top: 1vh;
+    margin-left: 0.7vh;
+    font-size: 2vmax;
+    text-align: center;
+    float: left;
+    border-radius: 30px;
+    padding: 0.5vh;
+    box-sizing: border-box;
+    background: rgb(0 ,0 ,0 , 0.5);
+    border: 0.5vh solid white;
+}
+
+.pag1_link:hover, .pag2_link:hover, .pag3_link:hover, .pag_menu:hover{
+    cursor: pointer;
+    color: black;
+    background-color: rgb(255 ,255 ,255);
+}
+
+body {
+    padding: 1vmax;
+    overflow-y: scroll;
+    background-image: url(Imagens/fundo.gif), radial-gradient(circle, rgb(214, 150, 104) 0%, rgb(156, 83, 48) 6%, rgb(75, 45, 38) 25%, rgb(27, 13, 17) 50%, rgb(23, 12, 21) 70%, rgb(8, 5, 10) 100%);; 
+    background-blend-mode: lighten;
+}
+
+section {
+    height: 80vmax;
+    width: 80vmax;
+    margin-top: 10vmax;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin: 0 auto;
+}
+
+.pad{
+    width: 30%;
+    height: 8vh;
+    margin-top: 1vh;
+    margin-right: 0.5vh;
+    font-size: 2vmax;
+    text-align: center;
+    float: right;
+    border-radius: 30px;
+    padding: 0.5vh;
+    box-sizing: border-box;
+    background: rgb(0 ,0 ,0 , 0.5);
+    border: 0.5vh solid white;
+}
+
+.scale_pad {
+    margin-top: 1vmin;
+    padding: 0.25vmin;
+    height: 6vmin;
+    width: 12vmin;
+    border-radius: 100px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    float: right;
+    box-sizing: border-box;
+    cursor: pointer;
+    background: rgb(0 ,0 ,0 , 0.5);
+    border: 0.5vh solid white;
+}
+
+.scale_pad:hover #scale_ball {
+    border: 0.5vh solid white;
+    background: rgb(0 ,0 ,0 , 0.5);
+}
+
+#scale_ball {
+    height: 4vmin;
+    width: 4vmin;
+    margin-top: 0.25vmin;
+    margin-left: 0.25vmin;
+    border-radius: 100%;
+    background-color: white;
+    transition: margin-left 0.2s linear;
+    box-sizing: border-box;
+}
+
+.scale_button {
+    height: 2.5vmax;
+    width: 5vmax;
+    margin-top: -2.5vmax;
+    position: absolute;
+    background-color: transparent;
+    border-radius: 100px;
+}
+
+#scale_button_on {
+    display: block;
+}
+
+#scale_button_off {
+    display: none;
+}
+
+.sol {
+    height: 6vmax;
+    width: 6vmax;
+    border-radius: 100%;
+    background-color: rgb(255, 196, 0);
+    position: absolute;
+    background-image: url(Planetas/sol.jpg);
+    background-size: cover;
+}
+
+.orbita {
+    border-radius: 100%;
+    border: 2px solid rgb(255,255,255,0.5);
+    position: absolute;
+}
+
+.mercurio {
+    height: 1vmax;
+    width: 1vmax;
+    border-radius: 100%;
+    background-color: rgb(120, 59, 59);
+    animation-name: animation_mercurio;
+    animation-duration: 0.5s;
+    position: absolute;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    background-image: url(Planetas/mercurio.png);
+    background-size: cover;
+}
+
+.mercurio::before {
+    content: "Mercúrio";
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: black;
+    padding: 5px 10px;
+    border-radius: 5px;
+    opacity: 0.7;
+}
+
+.mercurio_orbita {
+    height: 10vmax;
+    width: 10vmax;
+}
+
+.venus {
+    height: 2vmax;
+    width: 2vmax;
+    border-radius: 100%;
+    background-color: rgb(147, 161, 122);
+    animation-name: animation_venus;
+    animation-duration: 1.25s;
+    position: absolute;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    background-image: url(Planetas/venus.png);
+    background-size: cover;
+}
+
+.venus::before {
+    content: "Vênus";
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: black;
+    padding: 5px 10px;
+    border-radius: 5px;
+    opacity: 0.7;
+}
+
+.venus_orbita {
+    height: 20vmax;
+    width: 20vmax;
+}
+
+.terra {
+    height: 3vmax;
+    width: 3vmax;
+    border-radius: 100%;
+    background-color: rgb(34, 78, 255);
+    animation-name: animation_terra;
+    animation-duration: 2s;
+    position: absolute;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    background-image: url(Planetas/terra.jpg);
+    background-size: cover;
+}
+
+.terra::before {
+    content: "Terra";
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: black;
+    padding: 5px 10px;
+    border-radius: 5px;
+    opacity: 0.7;
+}
+
+.terra_orbita {
+    height: 30vmax;
+    width: 30vmax;
+}
+
+.blua{
+    animation-name: animation_blua;
+    animation-duration: 1s;
+    position: absolute;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.lua{
+    height: 2vmax;
+    width: 2vmax;
+    border-radius: 100%;
+    animation-name: animation_lua;
+    animation-duration: 1s;
+    position: absolute;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    background-image: url(Planetas/lua.jpg);
+    background-size: cover;
+}
+
+.lua::before {
+    content: "Lua";
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: black;
+    padding: 5px 10px;
+    border-radius: 5px;
+    opacity: 0.7;
+}
+
+.marte {
+    height: 2vmax;
+    width: 2vmax;
+    border-radius: 100%;
+    background-color: rgb(101, 45, 32);
+    animation-name: animation_marte;
+    animation-duration: 3.7s;
+    position: absolute;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    background-image: url(Planetas/marte.png);
+    background-size: cover;
+}
+
+.marte::before {
+    content: "Marte";
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: black;
+    padding: 5px 10px;
+    border-radius: 5px;
+    opacity: 0.7;
+}
+
+.marte_orbita {
+    height: 40vmax;
+    width: 40vmax;
+}
+
+.jupiter {
+    height: 7vmax;
+    width: 7vmax;
+    border-radius: 100%;
+    background-color: rgb(168, 135, 105);
+    animation-name: animation_jupiter;
+    animation-duration: 23.7s;
+    position: absolute;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    background-image: url(Planetas/jupiter.png);
+    background-size: cover;
+}
+
+.jupiter::before {
+    content: "Júpiter";
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: black;
+    padding: 5px 10px;
+    border-radius: 5px;
+    opacity: 0.7;
+}
+
+.jupiter_orbita {
+    height: 50vmax;
+    width: 50vmax;
+}
+
+.saturno {
+    height: 6vmax;
+    width: 6vmax;
+    border-radius: 100%;
+    background-color: rgb(136, 133, 115);
+    animation-name: animation_saturno;
+    animation-duration: 59s;
+    animation-delay: -50s;
+    position: absolute;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    background-image: url(Planetas/saturno.jpg);
+    background-size: cover;
+}
+
+.saturno::before {
+    content: "Saturno";
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: black;
+    padding: 5px 10px;
+    border-radius: 5px;
+    opacity: 0.7;
+}
+
+.saturno_orbita {
+    height: 60vmax;
+    width: 60vmax;
+}
+
+.aneis{
+    height: 100%;
+    width: 250%;
+    margin-left: -75%;
+}
+
+.urano {
+    height: 4vmax;
+    width: 4vmax;
+    border-radius: 100%;
+    background-color: rgb(128, 208, 226);
+    animation-name: animation_urano;
+    animation-duration: 168s;
+    animation-delay: -50s;
+    position: absolute;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    background-image: url(Planetas/urano.png);
+    background-size: cover;
+}
+
+.urano::before {
+    content: "Urano";
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: black;
+    padding: 5px 10px;
+    border-radius: 5px;
+    opacity: 0.7;
+}
+
+.urano_orbita {
+    height: 70vmax;
+    width: 70vmax;
+}
+
+.netuno {
+    height: 4vmax;
+    width: 4vmax;
+    border-radius: 100%;
+    background-color: rgb(79, 70, 118);
+    animation-name: animation_netuno;
+    animation-duration: 329.5s;
+    animation-delay: -150s;
+    position: absolute;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    background-image: url(Planetas/netuno.png);
+    background-size: cover;
+}
+
+.netuno::before {
+    content: "Netuno";
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: black;
+    padding: 5px 10px;
+    border-radius: 5px;
+    opacity: 0.7;
+}
+.netuno_orbita {
+    height: 80vmax;
+    width: 80vmax;
+}
+
+@keyframes animation_mercurio {
+    0% {
+        transform: rotate(0deg) translate(-5vmax) rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg) translate(-5vmax) rotate(-360deg);
+    }
+}
+
+@keyframes animation_venus {
+    0% {
+        transform: rotate(360deg) translate(-10vmax) rotate(-360deg);
+    }
+
+    100% {
+        transform: rotate(0deg) translate(-10vmax) rotate(0deg);
+    }
+}
+
+@keyframes animation_terra {
+    0% {
+        transform: rotate(0deg) translate(-15vmax) rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg) translate(-15vmax) rotate(-360deg);
+    }
+}
+
+@keyframes animation_blua {
+    0% {
+        transform: rotate(0deg) translate(-4vmax) rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg) translate(-4vmax) rotate(-360deg);
+    }
+}
+
+@keyframes animation_lua {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes animation_marte {
+    0% {
+        transform: rotate(0deg) translate(-20vmax) rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg) translate(-20vmax) rotate(-360deg);
+    }
+}
+
+@keyframes animation_jupiter {
+    0% {
+        transform: rotate(0deg) translate(-25vmax) rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg) translate(-25vmax) rotate(-360deg);
+    }
+}
+
+@keyframes animation_saturno {
+    0% {
+        transform: rotate(0deg) translate(-30vmax) rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg) translate(-30vmax) rotate(-360deg);
+    }
+}
+
+@keyframes animation_urano {
+    0% {
+        transform: rotate(360deg) translate(-35vmax) rotate(-360deg);
+    }
+
+    100% {
+        transform: rotate(0deg) translate(-35vmax) rotate(0deg);
+    }
+}
+
+@keyframes animation_netuno {
+    0% {
+        transform: rotate(0deg) translate(-40vmax) rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg) translate(-40vmax) rotate(-360deg);
+    }
+}
